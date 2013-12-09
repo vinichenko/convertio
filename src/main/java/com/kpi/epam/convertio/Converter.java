@@ -1,3 +1,5 @@
+package com.kpi.epam.convertio;
+
 import java.io.File;
 import it.sauronsoftware.jave.*;
 /**
@@ -15,7 +17,7 @@ public class Converter {
         int index = fileName.lastIndexOf('.');
         fileName = new StringBuffer(fileName).replace(index + 1, fileName.length(), "mp3").toString();
 
-        File outputFile = new File(way + "\\" + fileName);
+        File outputFile = new File(way + File.separator + fileName);
 
         AudioAttributes audio = new AudioAttributes();
         audio.setCodec("libmp3lame");
