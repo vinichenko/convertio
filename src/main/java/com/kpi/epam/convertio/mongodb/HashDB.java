@@ -11,9 +11,13 @@ public interface HashDB {
 
     long getNumberOfData();
 
-    String getAudioFormat(AudioData audio);
+    String isContain(Integer hash);
 
-    AudioFile insertAudio(AudioData audio);
+    String isContain(String hash);
+
+    void saveData(Integer hash, String way);
+
+    void saveData(String hash, String way);
 
 
 }

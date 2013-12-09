@@ -29,29 +29,36 @@ public class MongoHashDB implements HashDB {
     }
 
     @Override
-    public String getAudioFormat(AudioData audio) {
-        AudioFile audioFile = insertAudio(audio);
-        return audioFile.way;
+    public String isContain(Integer hash) {
+        return isContain(hash.toString());
     }
 
     @Override
-    public AudioFile insertAudio(AudioData audio) {
+    public String isContain(String hash) {
         DBObject dbObject = new BasicDBObject();
-        dbObject.put("hash: ", audio.hashCode());
+        dbObject.put("hash: ", hash);
         DBCursor curr = hashColl.find(dbObject);
 
-        if(curr == null)
-        {
-            // save file on storage
-            String way = null; // get way to file
-            dbObject.put("way: ", way);
-            hashColl.insert(dbObject);
-        } else
+        if(curr != null)
         {
             dbObject = hashColl.findOne(curr);
+            return dbObject.get("way").toString();
         }
 
-        return toFileObject(dbObject);
+        return null;
+    }
+
+    @Override
+    public void saveData(Integer hash, String way) {
+        saveData(hash.toString(), way);
+    }
+
+    @Override
+    public void saveData(String hash, String way) {
+        DBObject dbObject = new BasicDBObject();
+        dbObject.put("hash: ", hash);
+        dbObject.put("way: ", way);
+        hashColl.insert(dbObject);
     }
 
     private AudioFile toFileObject(DBObject obj)

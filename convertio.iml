@@ -11,7 +11,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="org.mongodb:mongo-java-driver:2.11.3" level="project" />
+    <orderEntry type="library" name="org.mongodb:mongo-java-driver:2.11.3" level="project" />
+    <orderEntry type="library" name="jave-1.0.2" level="project" />
   </component>
 </module>
 

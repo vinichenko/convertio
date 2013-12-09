@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74d53e13-25ed-4ca3-9614-56c5a33e1abe" name="Default" comment="" />
+    <list default="true" id="74d53e13-25ed-4ca3-9614-56c5a33e1abe" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kpi/epam/convertio/mongodb/HashDB.java" afterPath="$PROJECT_DIR$/src/main/java/com/kpi/epam/convertio/mongodb/HashDB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kpi/epam/convertio/mongodb/MongoHashDB.java" afterPath="$PROJECT_DIR$/src/main/java/com/kpi/epam/convertio/mongodb/MongoHashDB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convertio.iml" afterPath="$PROJECT_DIR$/convertio.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="convertio.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,21 +78,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MongoHashDB.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="convertio.iml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/convertio.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="24" selection-start="837" selection-end="837" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MongoHashDB.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/epam/convertio/mongodb/MongoHashDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="46" selection-start="585" selection-end="585" vertical-scroll-proportion="0.663837" vertical-offset="0" max-vertical-offset="1156">
+            <state line="29" column="0" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0" vertical-offset="582" max-vertical-offset="1071">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#isContain#1;class#MongoHashDB#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HashDB.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="HashDB.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/epam/convertio/mongodb/HashDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="33" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+            <state line="13" column="5" selection-start="229" selection-end="229" vertical-scroll-proportion="0.29715762" vertical-offset="106" max-vertical-offset="493">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,7 +113,7 @@
       <file leaf-file-name="AudioFile.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/epam/convertio/mongodb/domain/AudioFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="71" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+            <state line="15" column="34" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
               <folding />
             </state>
           </provider>
@@ -118,8 +133,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/epam/convertio/mongodb/domain/AudioFile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kpi/epam/convertio/mongodb/MongoHashDB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kpi/epam/convertio/Convert.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/epam/convertio/mongodb/HashDB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kpi/epam/convertio/mongodb/MongoHashDB.java" />
       </list>
     </option>
   </component>
@@ -248,36 +264,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="convertio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="convertio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mongodb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -295,6 +281,9 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jave-1.0.2/jave-1.0.2.jar!/" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -449,7 +438,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -458,7 +447,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3284553" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -499,25 +488,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/convertio.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="24" selection-start="837" selection-end="837" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/epam/convertio/mongodb/MongoHashDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0" vertical-offset="582" max-vertical-offset="1071">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#isContain#1;class#MongoHashDB#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/epam/convertio/mongodb/domain/AudioFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="71" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+        <state line="15" column="34" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/epam/convertio/mongodb/HashDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="33" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/epam/convertio/mongodb/MongoHashDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="46" selection-start="585" selection-end="585" vertical-scroll-proportion="0.663837" vertical-offset="0" max-vertical-offset="1156">
+        <state line="13" column="5" selection-start="229" selection-end="229" vertical-scroll-proportion="0.29715762" vertical-offset="106" max-vertical-offset="493">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
