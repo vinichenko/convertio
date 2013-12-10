@@ -1,7 +1,6 @@
 package com.kpi.epam.convertio.mongodb;
 
 
-import com.kpi.epam.convertio.mongodb.domain.AudioFile;
 import com.mongodb.*;
 import sun.audio.AudioData;
 
@@ -59,11 +58,5 @@ public class MongoHashDB implements HashDB {
         dbObject.put("hash: ", hash);
         dbObject.put("way: ", way);
         hashColl.insert(dbObject);
-    }
-
-    private AudioFile toFileObject(DBObject obj)
-    {
-        return new AudioFile(obj.get("hash").toString(),
-               obj.get("way").toString());
     }
 }
