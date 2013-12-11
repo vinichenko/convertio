@@ -27,15 +27,17 @@ public class UploadServlet extends javax.servlet.http.HttpServlet {
         } catch (NoSuchAlgorithmException e) {
             log("Hashing error");
             response.sendError(500);
+            return;
         }
         fileContent.reset();
         File src = new File(md5);
         FileUtils.copyInputStreamToFile(fileContent, src);
         try {
-            Converter.convert(src, "");
+            Converter.convert(src);
         } catch (EncoderException e) {
             log("Converter error", e);
         }
+        src.delete();
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

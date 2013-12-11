@@ -6,13 +6,8 @@ import it.sauronsoftware.jave.*;
 
 public class Converter {
 
-    static File convert(File inputFile, String way) throws EncoderException {
-
-        String fileName = inputFile.getName();
-        int index = fileName.lastIndexOf('.');
-        fileName = new StringBuffer(fileName).replace(index + 1, fileName.length(), "mp3").toString();
-
-        File outputFile = new File(way + File.separator + fileName);
+    static File convert(File inputFile) throws EncoderException {
+        File outputFile = new File(inputFile.getName() + ".mp3");
 
         AudioAttributes audio = new AudioAttributes();
         audio.setCodec("libmp3lame");
