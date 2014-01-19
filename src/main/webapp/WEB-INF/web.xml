@@ -4,13 +4,28 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-
     <servlet>
         <servlet-name>UploadServlet</servlet-name>
-        <servlet-class>ua.kpi.convertio.UploadServlet</servlet-class>
+        <servlet-class>ua.kpi.convertio.servlet.UploadServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DownloadServlet</servlet-name>
+        <servlet-class>ua.kpi.convertio.servlet.DownloadServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FileDownloader</servlet-name>
+        <servlet-class>ua.kpi.convertio.servlet.FileDownloader</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>UploadServlet</servlet-name>
         <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DownloadServlet</servlet-name>
+        <url-pattern>/download</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FileDownloader</servlet-name>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 </web-app>

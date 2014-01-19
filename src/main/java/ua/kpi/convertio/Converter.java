@@ -6,17 +6,24 @@ import it.sauronsoftware.jave.*;
 
 public class Converter {
 
-    static File convert(File inputFile) throws EncoderException {
-        File outputFile = new File(inputFile.getName() + ".mp3");
+    private static final String EXTENSION = ".mp3";
+    private static final String CODEC = "libmp3lame";
+    private static final int BIT_RATE = 128000;
+    private static final int CHANNEL_NUMBER = 2;
+    private static final int SAMPLING_RATE = 44100;
+    private static final String FORMAT = "mp3";
+
+    public static File convert(File inputFile) throws EncoderException {
+        File outputFile = new File(inputFile.getName() + EXTENSION);
 
         AudioAttributes audio = new AudioAttributes();
-        audio.setCodec("libmp3lame");
-        audio.setBitRate(128000);
-        audio.setChannels(2);
-        audio.setSamplingRate(44100);
+        audio.setCodec(CODEC);
+        audio.setBitRate(BIT_RATE);
+        audio.setChannels(CHANNEL_NUMBER);
+        audio.setSamplingRate(SAMPLING_RATE);
 
         EncodingAttributes attributes = new EncodingAttributes();
-        attributes.setFormat("mp3");
+        attributes.setFormat(FORMAT);
         attributes.setAudioAttributes(audio);
 
         Encoder encoder = new Encoder();

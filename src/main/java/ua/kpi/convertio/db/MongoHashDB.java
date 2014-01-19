@@ -1,4 +1,4 @@
-package com.kpi.epam.convertio.mongodb;
+package ua.kpi.convertio.db;
 
 
 import com.mongodb.*;
@@ -20,7 +20,7 @@ public class MongoHashDB implements HashDB {
         new MongoHashDB().write("hash", "aWay");
     }
     public MongoHashDB() throws UnknownHostException {
-        hashDB = new Mongo("localhost", 1992).getDB("hashDB");
+        hashDB = new Mongo("192.168.43.113", 1992).getDB("hashDB");
         hashColl = hashDB.getCollection("hash_way");
     }
 
@@ -37,6 +37,12 @@ public class MongoHashDB implements HashDB {
         DBObject obj = hashColl.findOne(dbObject, hashObject());
         if(obj != null) return true;
         return false;
+    }
+
+    @Override
+    public void shutDown()
+    {
+        hashDB.getMongo().close();
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.kpi.epam.convertio.mongodb;
+package ua.kpi.convertio.db;
 
 
 /**
@@ -16,6 +16,8 @@ public interface HashDB {
     void write(Integer hash, String way) throws InterruptedException;
 
     void write(String hash, String way) throws InterruptedException;
+
+    void shutDown();
 
 
 }

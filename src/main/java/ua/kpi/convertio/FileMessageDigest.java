@@ -8,12 +8,20 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class FileMessageDigest {
-    public static String getDigest(InputStream is) throws NoSuchAlgorithmException, IOException {
-        MessageDigest md = MessageDigest.getInstance("MD5");
+
+    private static MessageDigest md;
+
+    static {
+        try {
+            md = MessageDigest.getInstance("MD5");
+        } catch (NoSuchAlgorithmException e) {
+            // Should not happen
+        }
+    }
+
+    public static String getDigest(InputStream is) throws IOException {
         md.reset();
-
         int byteArraySize = 2048;
-
         byte[] bytes = new byte[byteArraySize];
         int numBytes;
 
@@ -22,8 +30,7 @@ public class FileMessageDigest {
         }
 
         byte[] digest = md.digest();
-        String result = new String(Hex.encodeHex(digest));
 
-        return result;
+        return new String(Hex.encodeHex(digest));
     }
 }

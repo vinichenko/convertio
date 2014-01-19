@@ -1,4 +1,4 @@
-package com.kpi.epam.convertio.mongodb.domain;
+package ua.kpi.convertio.db.domain;
 
 
 /**
