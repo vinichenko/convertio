@@ -19,12 +19,4 @@ public class DBFile {
         this.hash = hash.toString();
 
     }
-
-    @Override
-    public String toString() {
-        return "{\n" +
-                "\thash : \"" + hash + "\", \n" +
-                "\tway: \"" + way + "\", \n" +
-                "}";
-    }
 }

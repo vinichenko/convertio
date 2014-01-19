@@ -1,27 +1,25 @@
 package com.kpi.epam.convertio.mongodb;
 
-
 import com.mongodb.*;
 
 import java.net.UnknownHostException;
 
 /**
- * Created by Julia on 06.12.13.
+ * Created by Julia on 23.12.13.
  */
 
-public class MongoHashDB implements HashDB {
+public class MongoReplicaSetHashDB implements HashDB {
 
     public static final DBObject ANY = new BasicDBObject();
+    final Mongo mongo;
+    final DBCollection coll;
 
-    private final DB hashDB;
-    private final DBCollection hashColl;
+    public MongoReplicaSetHashDB() throws UnknownHostException {
+        mongo = new Mongo(new MongoURI("mongodb://127.0.0.1:27017,127.0.0.1:27018,127.0.0.1:27019"));
+        mongo.setWriteConcern(WriteConcern.REPLICA_ACKNOWLEDGED);
+        mongo.slaveOk();
 
-    public static void main(String[] args) throws UnknownHostException, InterruptedException {
-        new MongoHashDB().write("hash", "aWay");
-    }
-    public MongoHashDB() throws UnknownHostException {
-        hashDB = new Mongo("localhost", 1992).getDB("hashDB");
-        hashColl = hashDB.getCollection("hash_way");
+        coll  = mongo.getDB("hashDB").getCollection("hash_way");
     }
 
     private DBObject hashObject()
@@ -34,14 +32,14 @@ public class MongoHashDB implements HashDB {
 
     private boolean isContain(DBObject dbObject)
     {
-        DBObject obj = hashColl.findOne(dbObject, hashObject());
+        DBObject obj = coll.findOne(dbObject, hashObject());
         if(obj != null) return true;
         return false;
     }
 
     @Override
     public long getNumberOfData() {
-        return hashColl.count();
+        return coll.count();
     }
 
     @Override
@@ -49,10 +47,9 @@ public class MongoHashDB implements HashDB {
         return read(hash.toString());
     }
 
-    @Override
     public String read(String hash) throws InterruptedException {
         DBObject dbObject = new BasicDBObject("hash", hash);
-        DBObject obj = hashColl.findOne(dbObject, hashObject());
+        DBObject obj = coll.findOne(dbObject, hashObject());
 
         Thread.sleep(300);
 
@@ -64,7 +61,7 @@ public class MongoHashDB implements HashDB {
 
     @Override
     public void write(Integer hash, String way) throws InterruptedException {
-        write(hash.toString(), way);
+         write(hash.toString(), way);
     }
 
     @Override
@@ -74,7 +71,7 @@ public class MongoHashDB implements HashDB {
         if(!isContain(dbObject))
         {
             dbObject.put("way", way);
-            hashColl.insert(dbObject);
+            coll.insert(dbObject);
         }
         Thread.sleep(300);
     }

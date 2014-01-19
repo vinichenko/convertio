@@ -9,13 +9,13 @@ public interface HashDB {
 
     long getNumberOfData();
 
-    String isContain(Integer hash);
+    String read(Integer hash) throws InterruptedException;
 
-    String isContain(String hash);
+    String read(String hash) throws InterruptedException;
 
-    void saveData(Integer hash, String way);
+    void write(Integer hash, String way) throws InterruptedException;
 
-    void saveData(String hash, String way);
+    void write(String hash, String way) throws InterruptedException;
 
 
 }
